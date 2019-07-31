@@ -1,5 +1,6 @@
 from setuptools import setup
 from setuptools import find_packages
+
 setup(
     name="nsq_api",
     version="0.0.2",
@@ -8,17 +9,15 @@ setup(
     author="Deep Compute, LLC",
     author_email="contact@deepcompute.com",
     url="https://github.com/deep-compute/nsq-api",
-    license='MIT',
-    dependency_links=[
-        "https://github.com/deep-compute/nsq-api",
-    ],
+    license="MIT",
+    dependency_links=["https://github.com/deep-compute/nsq-api"],
     install_requires=[
         "tornado",
         "basescript==0.2.9",
         "nsq-py==0.1.10",
-        "logagg-utils==0.5.2"
+        "logagg-utils==0.5.2",
     ],
-    packages=find_packages('.'),
+    packages=find_packages("."),
     include_package_data=True,
     classifiers=[
         "Environment :: Console",
@@ -28,9 +27,5 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
-    entry_points={
-        "console_scripts": [
-            "nsq-api = nsq_api:main",
-            ]
-        }
+    entry_points={"console_scripts": ["nsq-api = nsq_api:main"]},
 )
